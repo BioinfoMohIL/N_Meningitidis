@@ -1,24 +1,7 @@
 version: 1.2
 workflows:
-  - subclass: WDL
-    primaryDescriptorPath: /nm_cc_and_mendevar.wdl
-    docker: "devorbitus/ubuntu-bash-jq-curl:latest"
-    workflowType: "WDL"
-    workflowTypeVersion: "1.0"
-    authors:
-      - "David Maimoun"
-    description: "Workflow to obtain clonal complex information and MendeVar reactivity data"
-    inputs:
-      - assembly:
-          type: File
-          description: "Assembly sequence file"
-    outputs:
-      - clonal_complex:
-          type: String
-          description: "Clonal complex result"
-      - mendevar_bexsero_reactivity:
-          type: String
-          description: "MendeVar Bexsero reactivity"
-      - mendevar_trumenba_reactivity:
-          type: String
-          description: "MendeVar Trumenba reactivity"
+ - name: Scan-N-Trim
+   subclass: WDL
+   primaryDescriptorPath: /nm_cc_and_mendevar.wdl
+   testParameterFiles:
+    - empty.json

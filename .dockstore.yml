@@ -1,6 +1,6 @@
 version: 1.2
 workflows:
- - name: Fetch NM CC and MenDeVAR
+ - name: Fetch_NM_CC_and_MenDeVAR
    subclass: WDL
    primaryDescriptorPath: /nm_cc_and_mendevar.wdl
 

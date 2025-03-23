@@ -1,6 +1,7 @@
 version: 1.2
 workflows:
- - name: Scan-N-Trim
+ - name: Fetch NM CC and MenDeVAR
    subclass: WDL
    primaryDescriptorPath: /nm_cc_and_mendevar.wdl
+   authors: David Maimoun
 

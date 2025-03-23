@@ -1,6 +1,6 @@
 # .dockstore.yml
 name: nm_mendevar_and_cc
-primaryDescriptorPath: "nm_cc_and_mendevar.wdl"  
+primaryDescriptorPath: "/nm_cc_and_mendevar.wdl"  
 docker: "devorbitus/ubuntu-bash-jq-curl:latest"
 workflowType: "WDL"
 workflowTypeVersion: "1.0"

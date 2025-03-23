@@ -3,6 +3,5 @@ workflows:
  - name: Fetch_NM_CC_and_MenDeVAR
    subclass: WDL
    primaryDescriptorPath: /nm_cc_and_mendevar.wdl
-   authors:
-    - David Maimoun
+
 

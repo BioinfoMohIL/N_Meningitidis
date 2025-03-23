@@ -1,3 +1,4 @@
+version: 1.0
 workflows:
   - subclass: WDL
     primaryDescriptorPath: /nm_cc_and_mendevar.wdl

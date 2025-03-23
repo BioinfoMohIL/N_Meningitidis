@@ -15,8 +15,8 @@ workflow nm_mendevar_and_cc {
 
     output {
         String clonal_complex = get_clonal_complex.clonal_complex
-        String bexsero = get_mendevar.bexsero
-        String trumenba = get_mendevar.trumenba
+        String mendevar_bexsero_reactivity = get_mendevar.bexsero
+        String mendevar_trumenba_reactivity = get_mendevar.trumenba
     }
 }
 
@@ -81,8 +81,6 @@ task get_mendevar {
         -X POST "${URL_BAST_DESIGNATION}" \
         -d "{\"designations\": { ${url} }}" > bast_type.json
 
-        echo "$response" | jq '.' > bast_type.json
-
         # Extract Bexsero and Trumenba reactivity
         bexsero=$(jq -r '.fields.MenDeVAR_Bexsero_reactivity' bast_type.json > bexsero.txt)
         trumenba=$(jq -r '.fields.MenDeVAR_Trumenba_reactivity' bast_type.json > trumenba.txt)
@@ -98,4 +96,3 @@ task get_mendevar {
         docker: "devorbitus/ubuntu-bash-jq-curl:latest"
     }
 }
-
